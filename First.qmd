@@ -1,32 +1,66 @@
 ---
 title: "First Repo doc"
 author: "Bern"
-format: html
+cireproc: true
+papersize: a4
+toc: true
+format:
+  revealjs: 
+   incremental: true
+   smaller: true
 editor: visual
+lang: nb-NO
+csl: apa-no-ampersand (citaion style)
+#csl: harvard-review-of-psychiatry
+#csl: apa-no-ampersand (citaion style)
+bibliography:
+- my.bib
+- references.bib
 ---
+
+## Sitering av pakker brukt
+
+Her er noen pakker som er brukt
+
+dplyr: [@dplyr]
+
+tidyverse: [@tidyverse]
+
+@tidyverse er en veldig kjekk pakke.
+
+[@zotero-item-79]
+
+[@datasets]
+
+## Ekstra referanser
+
+::: {#refs} 
+:::
 
 ## Hei 1
 
 ## Quarto
 
-##BAre litt ny tekst 
-Her er ny tekst lag til 
+##BAre litt ny tekst til Her er ny tekst lag til
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+## Tabeller
 
-## Running Code
-
-When you click the **Render** button a document will be generated that includes both content and the output of embedded code. You can embed code like this:
+Tar i bruk felxtable [@flextable]
 
 ```{r}
-1 + 1
+#|Echo: FALSE
+#|label: tbl-mtcars 
+#|tbl-cap: Mtcars table produced by flextable
+#|tbl-cap-location: bottom 
+#mtcars |> 
+   # flextable() |>
+   # line_spacing(space = 0.1)
 ```
 
-You can add options to executable code like this
+## References
 
-```{r}
-#| echo: false
-2 * 2
-```
+## Apendix
 
-The `echo: false` option disables the printing of code (only output is displayed).
+Her er mitt appendiks
+
+## 
