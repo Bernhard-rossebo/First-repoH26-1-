@@ -3,6 +3,7 @@ title: "First Repo doc"
 author: "Bern"
 cireproc: true
 papersize: a4
+typst: default
 toc: true
 format:
   revealjs: 
@@ -34,7 +35,7 @@ tidyverse: [@tidyverse]
 
 ## Ekstra referanser
 
-::: {#refs} 
+::: {#refs}
 :::
 
 ## Hei 1
@@ -63,4 +64,10 @@ Tar i bruk felxtable [@flextable]
 
 Her er mitt appendiks
 
-## 
+
+```{r}
+#relative part
+#my_file <- "./../../introduction/intro/intro.qmd"
+#my_text <- readLines(con = file(my_file, encoding = "UTF-8"), n = 7)
+#close (con)
+```

@@ -1,0 +1,54 @@
+---
+title: "Import and Export of data"
+author: "Bern"
+cireproc: true
+papersize: a4
+typst: default
+toc: true
+format: 
+  html:
+  typst: default
+  
+editor: visual
+lang: nb-NO
+
+bibliography:
+- my.bib
+- references.bib
+---
+
+```{r}
+#|label: setup
+#|echo: FALSE
+#|message: FALSE
+library(tidyverse)
+library(flextable)
+library(PxWebApiData)
+library(readxl)
+```
+
+## Import Data
+
+```{r}
+arbled <- readxl::read_xlsx(
+  path = "./Data/arbeidsledighet.xlsx",
+  range = "A5:D17"
+)
+```
+
+```{r}
+arbled <- readxl::read_xlsx(
+  path = "./Data/arbeidsledighet.xlsx",
+  sheet = "10540",
+  na = ":", 
+  skip = 4, 
+  n_max = 13)
+```
+
+## Reading csv file
+
+```{r}
+X10540_20260828_133036 <- read_delim("Data/10540_20260828-133036.csv", 
+                                     delim = ";", escape_double = FALSE, locale = locale(encoding = "ISO-8859-1"), 
+                                     trim_ws = TRUE, skip = 1)
+```
